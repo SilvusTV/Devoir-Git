@@ -26,6 +26,6 @@ Examples of unacceptable behavior by participants include:
 
 ## Enforcement
 
-If you experience or witness unacceptable behavior, or have any other concerns, please contact us at [your-email@example.com].
+If you experience or witness unacceptable behavior, or have any other concerns, please contact us at [todoreact@gmail.com].
 
 We will review the incident and take appropriate action, which may include warning the offender or removing them from the project.
