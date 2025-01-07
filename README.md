@@ -11,6 +11,12 @@ This is a simple Todo List application built with React. It allows users to add,
 
 ## Installation
 
+To add the backup repository remote:
+
+```bash
+   git remote add upstream git@github.com:FloMenus/Devoir-Git-Backup.git
+```
+
 To run the project locally:
 
 1. Clone the repository:
