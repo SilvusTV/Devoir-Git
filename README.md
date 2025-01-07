@@ -15,5 +15,5 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/todo-list-react.git
+   git clone git@github.com:SilvusTV/Devoir-Git.git
    ```
