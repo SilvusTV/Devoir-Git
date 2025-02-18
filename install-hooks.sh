@@ -7,26 +7,27 @@ mkdir -p .git/hooks
 cat << 'EOF' > .git/hooks/pre-commit
 #!/bin/sh
 
-# Vérification du lint avant le commit
+# Vérification du lint avant le commit.
 echo "Running ESLint..."
 
-# Exécuter ESLint sur les fichiers modifiés
-FILES=$(git diff --cached --name-only --diff-filter=AM | grep '\.tsx\?$')
+# Récupérer la liste des fichiers TypeScript/TSX ajoutés/modifiés en staging
+FILES=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.(tsx|ts)$' || true)
+
 if [ -z "$FILES" ]; then
-  echo "No TypeScript or JSX files to lint. Skipping lint check."
+  echo "No TypeScript or TSX files to lint. Skipping lint check."
   exit 0
 fi
 
-# Lancer ESLint sur les fichiers modifiés
-npx eslint $FILES
+# Vérifier ESLint
+npx eslint --fix $FILES
 
-# Si ESLint trouve des erreurs, annuler le commit
+# Vérifier le code de sortie d'ESLint
 if [ $? -ne 0 ]; then
-  echo "Linting failed! Commit aborted."
+  echo "❌ ESLint found issues! Commit aborted."
   exit 1
 fi
 
-echo "Linting passed! Proceeding with commit."
+echo "✅ ESLint passed! Proceeding with commit."
 EOF
 
 # Rendre le fichier pre-commit exécutable
