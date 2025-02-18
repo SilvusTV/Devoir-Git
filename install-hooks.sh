@@ -7,7 +7,7 @@ mkdir -p .git/hooks
 cat << 'EOF' > .git/hooks/pre-commit
 #!/bin/sh
 
-# Vérification du lint avant le commit
+# Vérification du lint avant le commit.
 echo "Running ESLint..."
 
 # Exécuter ESLint sur les fichiers modifiés
