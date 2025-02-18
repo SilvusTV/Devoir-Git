@@ -164,7 +164,7 @@ function App() {
         <h1 className="text-3xl text-primary-50 text-center font-bold">Todos List</h1>
         <div className="flex justify-center">
           <div className="w-8/12">
-              <TodoObjectList todos={todos} setTodos={setTodos} />
+                <TodoObjectList todos={todos} setTodos={setTodos} />
           </div>
         </div>
       </div>
